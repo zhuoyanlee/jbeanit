@@ -73,29 +73,18 @@
                     <div class="container">
                         <div class="MenuBar__inner">
                             <div class="MenuBar__left"><a class="MenuBar__logo MenuBar__logo--visible1" href="/">
-                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.33 43.04">
-                                            <polyline points="91.33 43.04 0 43.04 0 0 91.33 0" fill="none"></polyline>
-                                            <path
-                                                d="M0,13.34H13.56v16.6c0,2.71-.09,2.76-6,8.52l-.67.66L10.57,43l1.2-1.17c6.55-6.36,7.24-7,7.24-12.29V7.89H0Z">
-                                            </path>
-                                            <polygon points="79.1 7.89 73.62 7.89 73.62 34.5 79.1 34.5 79.1 7.89">
-                                            </polygon>
-                                            <polygon points="44.21 35.14 54.49 8.3 48.45 8.3 38.16 35.14 44.21 35.14">
-                                            </polygon>
-                                            <rect class="JitLogo__particle JitLogo__particle--1" x="78.1" y="18.79"
-                                                width="13.23" height="5.46"></rect>
-                                            <rect class="JitLogo__particle JitLogo__particle--3" x="61.39" y="18.79"
-                                                width="12.43" height="5.46"></rect>
-                                            <polygon class="JitLogo__particle JitLogo__particle--2"
-                                                points="89.17 29.68 79.1 29.68 61.39 29.68 61.39 35.14 79.1 35.14 89.17 35.14 91.33 35.14 91.33 29.68 89.17 29.68">
-                                            </polygon>
-                                            <polygon class="JitLogo__particle JitLogo__particle--4"
-                                                points="89.17 7.89 79.1 7.89 61.39 7.89 61.39 13.35 79.1 13.35 89.17 13.35 91.33 13.35 91.33 7.89 89.17 7.89">
-                                            </polygon>
-                                        </svg></div>
+                                    <div><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                        width="84.000000pt" height="84.000000pt" viewBox="0 0 90.000000 84.000000"
+                                        >
+                                       <g transform="translate(0.000000,84.000000) scale(0.100000,-0.100000)">
+                                       <!-- Main logo shape - now filled completely -->
+                                       <path d="M718 655 c-112 -31 -160 -56 -194 -100 -23 -31 -26 -42 -21 -83 5-43 -7 -82 -27 -82 -3 0 -6 8 -6 18 0 9 -9 31 -20 49 -11 19 -15 35 -10 38 21 13 10 57 -20 85 -30 28 -86 45 -169 52 -43 4 -51 -16 -14 -36 15 -8 39 -31 53 -50 30 -41 69 -66 103 -66 19 0 27 -8 40 -42 28 -76 37 -122 37 -186 0 -45 3 -63 12 -60 8 3 13 27 13 64 1 32 9 83 19 112 17 52 18 52 59 52 66 0 100 28 148 120 23 45 55 91 71 103 26 20 37 38 21 36 -5 0 -47 -11 -95 -24z" 
+                                             fill="#000000" stroke="none"/>
+                                       
+                                       </g>
+                                       </svg></div>
                                 </a></div>
-                            <div class="MenuBar__center"><span class="MenuBar__claim">Jit Team™ — the human factor of
-                                    IT</span></div>
+                            <div class="MenuBar__center"><span class="MenuBar__claim">Bean IT™ — Canberra born IT</span></div>
                             <div class="MenuBar__right"><a href="#Clients" class="MenuBar__blog"><span
                                         class="MenuBar__triggerLabel">Clients</span></a><a href="#services"
                                     class="MenuBar__join"><span class="MenuBar__triggerLabel">Services</span></a><a href="#our-people" class="MenuBar__contact"><span
@@ -149,7 +138,7 @@
                             <div class="HomeBrands__main">
                                 <div class="HomeBrands__mainSticky">
                                     <div class="HomeBrands__mainInner HomeBrands__mainInner--isActive">
-                                        <div class="HomeBrands__title">Signal Ocean</div>
+                                        <div class="HomeBrands__title">Department of Veterans' Affairs</div>
                                         <div class="HomeBrands__description">Signal Ocean provides a platform
                                             responsible for data analysis for the ship management industry. Jit Team
                                             cooperated with Signal Ocean on developing the frontend layers of the
@@ -555,12 +544,7 @@
             document.querySelector('.HomePeople__ipad__serviceBox').innerHTML =
                 content.items.map(item => `<div class="HomePeople__ipad__serviceItems">${item}</div>`).join('');
 
-            // Update people
-            const person = content.people[0];
-            document.querySelector('.HomePeople__ipad__peopleName').textContent = person.name;
-            document.querySelector('.HomePeople__ipad__peoplePosition').textContent = person.position;
-            document.querySelector('.HomePeople__ipad__peopleSkillsWrapper ul').innerHTML =
-                person.skills.map(skill => `<li class="HomePeople__ipad__peopleSkills">+ ${skill}</li>`).join('');
+           
         }
 
         // Attach click handlers to iPad tabs
