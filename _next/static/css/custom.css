@@ -8,6 +8,10 @@
     
     height: 100vh;
 }
+.HomeBrands__description p:not(:first-child) {
+    margin-top: calc(.00794 * 100vw + 4.12698px);
+}
+
 .HomeBrands.AboutFeatures {
     margin-top: 0;
     padding-top: calc(.10317 * 100vw + -6.34921px);
