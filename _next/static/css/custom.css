@@ -1,0 +1,58 @@
+.HomeIntro__background img {
+    position: absolute;
+    top: 10vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+    background-position: 50% 50%;
+    background-size: cover;
+    
+    height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .HomeIntro__background img {
+        font-size: 2.8rem;
+
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .HomeIntro__background img {
+        height: 80vh !important;
+        /* Smaller height on tablets */
+    }
+
+    .HomeIntro__background img {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .HomeIntro__background img {
+        height: 60vh !important;
+        /* Even smaller height on mobile */
+    }
+
+    .HomeIntro__background img {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
