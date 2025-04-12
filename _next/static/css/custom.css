@@ -36,13 +36,22 @@
     }
 }
 
+.HomePeople__mobile__servicesNav, .HomePeople__ipad__servicesNav {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    display: flex; /* Optional: if you want flex layout */
+}
+
 .HomePeople__ipad, .HomePeople__mobile, .HomePeople__desktop {
     min-height: auto!important;
     padding-bottom: calc(.10317 * 100vw + -6.34921px);
 }
 
 /** Menu bar **/
-
+.MenuBar__logo img {
+    display:none;
+}
 /* Hamburger Button Styles */
 .hamburger-btn {
     display: none;
@@ -135,14 +144,18 @@
     }
     
     .MenuBar {
-        background: #f1f1f1;
+        background: #fff;
     }
     .MenuBar__logo svg {
-        width: 70px;
+        display: none;
     }
     /* Optional: Hide claim text on mobile if needed */
     .MenuBar__claim {
         display: none;
+    }
+    .MenuBar__logo img {
+        display:flex;
+        width: 100px;
     }
 }
 
