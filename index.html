@@ -69,28 +69,45 @@
     <div id="__next">
         <div class="CookiesConsentProvidercss__CookiesConsentProviderStyled-sc-1gonv1h-0 lawEsS CookiesConsentProvider">
             <div id="Page" class="Page">
-                <div class="MenuBar MenuBar--default  ">
+                <div class="MenuBar MenuBar--default">
                     <div class="container">
                         <div class="MenuBar__inner">
-                            <div class="MenuBar__left"><a class="MenuBar__logo MenuBar__logo--visible1" href="/">
-                                    <div><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="84.000000pt"
-                                            height="84.000000pt" viewBox="0 0 90.000000 84.000000">
+                            <div class="MenuBar__left">
+                                <a class="MenuBar__logo MenuBar__logo--visible1" href="/">
+                                    <div>
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="84.000000pt" height="84.000000pt" viewBox="0 0 90.000000 84.000000">
                                             <g transform="translate(0.000000,84.000000) scale(0.100000,-0.100000)">
-                                                <!-- Main logo shape - now filled completely -->
-                                                <path
-                                                    d="M718 655 c-112 -31 -160 -56 -194 -100 -23 -31 -26 -42 -21 -83 5-43 -7 -82 -27 -82 -3 0 -6 8 -6 18 0 9 -9 31 -20 49 -11 19 -15 35 -10 38 21 13 10 57 -20 85 -30 28 -86 45 -169 52 -43 4 -51 -16 -14 -36 15 -8 39 -31 53 -50 30 -41 69 -66 103 -66 19 0 27 -8 40 -42 28 -76 37 -122 37 -186 0 -45 3 -63 12 -60 8 3 13 27 13 64 1 32 9 83 19 112 17 52 18 52 59 52 66 0 100 28 148 120 23 45 55 91 71 103 26 20 37 38 21 36 -5 0 -47 -11 -95 -24z"
-                                                    fill="#000000" stroke="none" />
-
+                                                <path d="M718 655 c-112 -31 -160 -56 -194 -100 -23 -31 -26 -42 -21 -83 5-43 -7 -82 -27 -82 -3 0 -6 8 -6 18 0 9 -9 31 -20 49 -11 19 -15 35 -10 38 21 13 10 57 -20 85 -30 28 -86 45 -169 52 -43 4 -51 -16 -14 -36 15 -8 39 -31 53 -50 30 -41 69 -66 103 -66 19 0 27 -8 40 -42 28 -76 37 -122 37 -186 0 -45 3 -63 12 -60 8 3 13 27 13 64 1 32 9 83 19 112 17 52 18 52 59 52 66 0 100 28 148 120 23 45 55 91 71 103 26 20 37 38 21 36 -5 0 -47 -11 -95 -24z" fill="#000000" stroke="none" />
                                             </g>
-                                        </svg></div>
-                                </a></div>
-                            <div class="MenuBar__center"><span class="MenuBar__claim">Bean IT™ — Canberra born IT</span>
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="MenuBar__right"><a href="#Clients" class="MenuBar__blog"><span
-                                        class="MenuBar__triggerLabel">Clients</span></a><a href="#services"
-                                    class="MenuBar__join"><span class="MenuBar__triggerLabel">Services</span></a><a
-                                    href="#our-people" class="MenuBar__contact"><span
-                                        class="MenuBar__triggerLabel">People</span></a></div>
+                            <div class="MenuBar__center">
+                                <span class="MenuBar__claim">Bean IT™ — Canberra born IT</span>
+                            </div>
+                            <div class="MenuBar__right">
+                                <!-- Hamburger Button -->
+                                <button class="hamburger-btn" aria-label="Menu">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </button>
+                                <!-- Mobile Menu Overlay -->
+                                <div class="mobile-menu-overlay">
+                                    <div class="mobile-menu-content">
+                                        <a href="#Clients" class="MenuBar__blog"><span class="">Clients</span></a>
+                                        <a href="#services" class="MenuBar__join"><span class="">Services</span></a>
+                                        <a href="#our-people" class="MenuBar__contact"><span class="">People</span></a>
+                                    </div>
+                                </div>
+                                <!-- Desktop Menu Items -->
+                                <div class="desktop-menu">
+                                    <a href="#Clients" class="MenuBar__blog"><span class="MenuBar__triggerLabel">Clients</span></a>
+                                    <a href="#services" class="MenuBar__join"><span class="MenuBar__triggerLabel">Services</span></a>
+                                    <a href="#our-people" class="MenuBar__contact"><span class="MenuBar__triggerLabel">People</span></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -783,6 +800,27 @@
 
 
         }
+        document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const mobileMenu = document.querySelector('.mobile-menu-overlay');
+    
+    hamburgerBtn.addEventListener('click', function() {
+        // Toggle mobile menu
+        mobileMenu.classList.toggle('active');
+        
+        // Animate hamburger to X
+        this.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    const menuLinks = document.querySelectorAll('.mobile-menu-content a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+        });
+    });
+});
     </script>
 </body>
 

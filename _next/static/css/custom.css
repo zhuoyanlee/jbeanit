@@ -8,6 +8,14 @@
     
     height: 100vh;
 }
+
+@media (max-width: 739px) {
+    .HomeBrands__mainInner--isActive {
+        display: grid;
+        grid-template-rows: auto auto auto!important;
+    }
+}
+
 .HomeBrands__description p:not(:first-child) {
     margin-top: calc(.00794 * 100vw + 4.12698px);
 }
@@ -19,10 +27,79 @@
     margin-bottom: 0;
     min-height: auto;
 }
+
+@media (min-width: 420px) {
+    .HomeBrands.AboutFeatures {
+        margin-right: 30px;
+        margin-left: 30px;
+        width: calc(100% - 2 * 30px);
+    }
+}
+
 .HomePeople__ipad, .HomePeople__mobile, .HomePeople__desktop {
     min-height: auto!important;
     padding-bottom: calc(.10317 * 100vw + -6.34921px);
 }
+
+/** Menu bar **/
+
+/* Hamburger Button Styles */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile-menu-content a {
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
 /* Responsive adjustments */
 .HomePeople__desktop {
     margin-top: 0 !important; ;
@@ -48,8 +125,24 @@
         font-size: 2.2rem;
     }
 
-    .hero-content p {
-        font-size: 1.1rem;
+    /* Menu bar */
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    .desktop-menu {
+        display: none;
+    }
+    
+    .MenuBar {
+        background: #f1f1f1;
+    }
+    .MenuBar__logo svg {
+        width: 70px;
+    }
+    /* Optional: Hide claim text on mobile if needed */
+    .MenuBar__claim {
+        display: none;
     }
 }
 
@@ -73,3 +166,15 @@
         font-size: 0.9rem;
     }
 }
+
+@media (min-width: 769px) {
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+    
+    .desktop-menu {
+        display: flex;
+        gap: 20px;
+    }
+}
+
