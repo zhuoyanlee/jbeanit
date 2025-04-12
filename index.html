@@ -44,7 +44,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="static/favicons/favicon.jpg">
     <link rel="icon" type="image/png" sizes="32x32" href="static/favicons/favicon.jpg">
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicons/favicon.jpg">
-    
+
     <link rel="mask-icon" href="static/favicons/safari-pinned-tab.svg" color="#ffc703">
     <link rel="shortcut icon" href="static/favicons/favicon.jpg">
     <meta name="msapplication-TileColor" content="#ffc703">
@@ -721,49 +721,45 @@
         function updateServiceTab(activeIndex) {
             const content = serviceTabContent[activeIndex];
 
-            // Update active tab
+            // Update text and items for all versions
+            document.querySelector('.HomePeople__ipad__textBox p').textContent = content.text;
+            document.querySelector('.HomePeople__ipad__serviceBox').innerHTML =
+                content.items.map(item => `<div class="HomePeople__ipad__serviceItems">${item}</div>`).join('');
+
+            document.querySelector('.HomePeople__textBox p').textContent = content.text;
+            document.querySelector('.HomePeople__serviceBox').innerHTML =
+                content.items.map(item => `<div class="HomePeople__serviceItems">${item}</div>`).join('');
+
+            document.querySelector('.HomePeople__mobile__textBox p').textContent = content.text;
+            document.querySelector('.HomePeople__mobile__serviceBox').innerHTML =
+                content.items.map(item => `<div class="HomePeople__mobile__serviceItems">${item}</div>`).join('');
+
+            // Update active tabs
             document.querySelectorAll('.HomePeople__ipad__services').forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    updateServiceTab(index);
-
-                    // Update text
-                    document.querySelector('.HomePeople__ipad__textBox p').textContent = content.text;
-                    // Update items
-                    document.querySelector('.HomePeople__ipad__serviceBox').innerHTML =
-                        content.items.map(item => `<div class="HomePeople__ipad__serviceItems">${item}</div>`).join('');
-
-                });
-
-                    // Highlight active service
-                    tab.classList.toggle('HomePeople__ipad__activeService', index === activeIndex);
-
+                tab.classList.toggle('HomePeople__ipad__activeService', index === activeIndex);
             });
 
             document.querySelectorAll('.HomePeople__services').forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    updateServiceTab(index);
-                    document.querySelector('.HomePeople__textBox p').textContent = content.text;
-                    // Update items
-                    document.querySelector('.HomePeople__serviceBox').innerHTML =
-                        content.items.map(item => `<div class="HomePeople__serviceItems">${item}</div>`).join('');
-                });
                 tab.classList.toggle('HomePeople__activeService', index === activeIndex);
             });
 
             document.querySelectorAll('.HomePeople__mobile__services').forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    updateServiceTab(index);
-                    document.querySelector('.HomePeople__mobile__textBox p').textContent = content.text;
-                    // Update items
-                    document.querySelector('.HomePeople__mobile__serviceBox').innerHTML =
-                        content.items.map(item => `<div class="HomePeople__mobile__serviceItems">${item}</div>`).join('');
-                    tab.classList.toggle('HomePeople__mobile__activeService', index === activeIndex);
-                });
+                tab.classList.toggle('HomePeople__mobile__activeService', index === activeIndex);
             });
-
-
-
         }
+
+        // Set up event listeners (this should probably only run once, not on every update)
+        document.querySelectorAll('.HomePeople__ipad__services').forEach((tab, index) => {
+            tab.addEventListener('click', () => updateServiceTab(index));
+        });
+
+        document.querySelectorAll('.HomePeople__services').forEach((tab, index) => {
+            tab.addEventListener('click', () => updateServiceTab(index));
+        });
+
+        document.querySelectorAll('.HomePeople__mobile__services').forEach((tab, index) => {
+            tab.addEventListener('click', () => updateServiceTab(index));
+        });
 
         updateServiceTab(0);
 
