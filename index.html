@@ -857,26 +857,34 @@
 
         }
         document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.querySelector('.hamburger-btn');
-    const mobileMenu = document.querySelector('.mobile-menu-overlay');
-    
-    hamburgerBtn.addEventListener('click', function() {
-        // Toggle mobile menu
-        mobileMenu.classList.toggle('active');
-        
-        // Animate hamburger to X
-        this.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    const menuLinks = document.querySelectorAll('.mobile-menu-content a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            hamburgerBtn.classList.remove('active');
+            const hamburgerBtn = document.querySelector('.hamburger-btn');
+            const mobileMenu = document.querySelector('.mobile-menu-overlay');
+            
+            hamburgerBtn.addEventListener('click', function() {
+                // Toggle mobile menu
+                mobileMenu.classList.toggle('active');
+                
+                // Animate hamburger to X
+                this.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const menuLinks = document.querySelectorAll('.mobile-menu-content a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                });
+            });
         });
-    });
-});
+        // Close overlay when clicking outside content (mobile-friendly)
+        document.querySelectorAll('.profile-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this || e.target.classList.contains('overlay-background')) {
+                window.location.hash = '#';
+                }
+            });
+        });
     </script>
 </body>
 
