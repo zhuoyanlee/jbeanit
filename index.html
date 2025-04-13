@@ -881,7 +881,7 @@
         document.querySelectorAll('.profile-overlay').forEach(overlay => {
             overlay.addEventListener('click', function(e) {
                 if (e.target === this || e.target.classList.contains('overlay-background')) {
-                window.location.hash = '#';
+                    window.location.hash = '#random';
                 }
             });
         });
