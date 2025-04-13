@@ -225,7 +225,7 @@
     z-index: 1000;
     background: white;
     padding: 2rem;
-    max-width: 600px;
+    max-width: 80%;
     width: 90%;
     border-radius: 8px;
     position: relative;
@@ -256,6 +256,9 @@
     visibility: visible;
     display: flex;
     opacity: 1;
+    
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-overlay:target .overlay-content {
