@@ -165,6 +165,7 @@
 @media (max-width: 480px) {
     .HomeIntro__background img {
         height: 60vh !important;
+        top: 30vh !important;
         /* Even smaller height on mobile */
     }
 
