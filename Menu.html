@@ -24,11 +24,30 @@
         }
         
         .menu-container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             background: #fff;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             padding: 60px 50px;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            column-gap: 60px;
+        }
+        
+        @media print {
+            .menu-grid {
+                column-gap: 50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .header {
@@ -55,7 +74,8 @@
         }
         
         .category {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
+            break-inside: avoid;
         }
         
         .category-title {
@@ -101,20 +121,18 @@
         }
         
         .decorative-element {
-            text-align: center;
-            color: #c9a961;
-            font-size: 24px;
-            margin: 40px 0;
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="menu-container">
         <div class="header">
-            <h1>Our Menu</h1>
+            <h1>Lee Kitchen Menu</h1>
             <p class="tagline">A Culinary Journey Around the World</p>
         </div>
 
+        <div class="menu-grid">
         <div class="category">
             <h2 class="category-title">Vietnamese</h2>
             
@@ -492,6 +510,7 @@
             <div class="menu-item">
                 <span class="item-name">Aldi Coffee</span>
                 <span class="item-dots"></span>
+            </div>
             </div>
         </div>
 
