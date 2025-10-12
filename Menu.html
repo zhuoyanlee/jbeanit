@@ -3,11 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu</title>
+    <title>Lee Kitchen Menu</title>
     <style>
         @media print {
-            body { margin: 0; padding: 20px; }
-            .menu-container { box-shadow: none; }
+            body { margin: 0; padding: 10px; }
+            .menu-container { 
+                box-shadow: none;
+                padding: 30px 35px;
+                max-width: 100%;
+            }
+            .menu-grid {
+                column-gap: 40px;
+                gap: 20px;
+            }
+            .header {
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+            .header h1 {
+                font-size: 36px;
+                margin-bottom: 5px;
+            }
+            .header .tagline {
+                font-size: 13px;
+            }
+            .category {
+                margin-bottom: 25px;
+            }
+            .category-title {
+                font-size: 20px;
+                margin-bottom: 12px;
+                padding-bottom: 6px;
+            }
+            .menu-item {
+                margin-bottom: 8px;
+            }
+            .item-name {
+                font-size: 14px;
+            }
+            .footer {
+                margin-top: 30px;
+                padding-top: 20px;
+                font-size: 12px;
+            }
         }
         
         * {
@@ -28,7 +66,7 @@
             margin: 0 auto;
             background: #fff;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            padding: 60px 50px;
+            padding: 50px 40px;
         }
         
         .menu-grid {
@@ -36,12 +74,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             column-gap: 60px;
-        }
-        
-        @media print {
-            .menu-grid {
-                column-gap: 50px;
-            }
         }
         
         @media (max-width: 768px) {
@@ -53,69 +85,58 @@
         .header {
             text-align: center;
             border-bottom: 3px double #c9a961;
-            padding-bottom: 30px;
-            margin-bottom: 50px;
+            padding-bottom: 25px;
+            margin-bottom: 40px;
         }
         
         .header h1 {
-            font-size: 48px;
+            font-size: 42px;
             color: #2c2c2c;
             font-weight: 300;
             letter-spacing: 4px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-transform: uppercase;
         }
         
         .header .tagline {
-            font-size: 16px;
+            font-size: 15px;
             color: #c9a961;
             font-style: italic;
             letter-spacing: 2px;
         }
         
         .category {
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             break-inside: avoid;
         }
         
         .category-title {
-            font-size: 28px;
+            font-size: 22px;
             color: #c9a961;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #f0f0f0;
             font-weight: 400;
         }
         
         .menu-item {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            margin-bottom: 10px;
         }
         
         .item-name {
-            font-size: 18px;
+            font-size: 16px;
             color: #2c2c2c;
             font-weight: 600;
-            flex: 1;
-        }
-        
-        .item-dots {
-            flex-grow: 1;
-            border-bottom: 2px dotted #ddd;
-            margin: 0 15px 5px 15px;
-            min-width: 30px;
         }
         
         .footer {
             text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
+            margin-top: 40px;
+            padding-top: 25px;
             border-top: 3px double #c9a961;
-            font-size: 14px;
+            font-size: 13px;
             color: #888;
             font-style: italic;
         }
@@ -128,7 +149,7 @@
 <body>
     <div class="menu-container">
         <div class="header">
-            <h1>Lee Kitchen Menu</h1>
+            <h1>Lee Kitchen</h1>
             <p class="tagline">A Culinary Journey Around the World</p>
         </div>
 
@@ -138,32 +159,26 @@
             
             <div class="menu-item">
                 <span class="item-name">Vietnamese Caramel Pork</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Vietnamese Spring Roll</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Vietnamese Lemongrass Tofu</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Vietnamese Fish Sauce (Nuoc Mam)</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Pho Bo</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Vegetarian Cold Spring Rolls</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -174,17 +189,14 @@
             
             <div class="menu-item">
                 <span class="item-name">Thai Red Curry Chicken</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Pad Thai</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Thai Lychee Red Curry Chicken/Duck</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -195,42 +207,34 @@
             
             <div class="menu-item">
                 <span class="item-name">Hainanese Chicken Rice</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Bak Kut Teh 肉骨茶</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Tomato Fried Egg 番茄炒蛋</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Mapo Tofu 麻婆豆腐</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Chinese Beef Brisket</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Red Cooked Pork Belly 红烧肉</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Dumpling Skin</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Hotpot 麻辣锅</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -241,17 +245,14 @@
             
             <div class="menu-item">
                 <span class="item-name">Gochujang Chicken</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Kimchi Chigae</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Galbitang</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -262,17 +263,14 @@
             
             <div class="menu-item">
                 <span class="item-name">Tenzaru Soba</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Sushi Rice</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Teriyaki Beef</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -283,7 +281,6 @@
             
             <div class="menu-item">
                 <span class="item-name">Phnom Penh Noodles</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -294,27 +291,22 @@
             
             <div class="menu-item">
                 <span class="item-name">Phnom Penh Noodles</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Pad Thai</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Stir Fried Rice Noodles 干炒牛河</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Tenzaru Soba</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Plain Soup Noodle 阳春面</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -325,17 +317,14 @@
             
             <div class="menu-item">
                 <span class="item-name">Massanam Curry</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Butter Chicken</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Golden Coconut Chicken Curry</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -346,7 +335,6 @@
             
             <div class="menu-item">
                 <span class="item-name">Chicken Shawarma</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -357,17 +345,14 @@
             
             <div class="menu-item">
                 <span class="item-name">Boiled Pork Belly</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Crackling Pork Belly</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Massanam Curry (Lamb Shank)</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -378,17 +363,14 @@
             
             <div class="menu-item">
                 <span class="item-name">Beef Brisket and Radish</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Teriyaki Beef</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Chuck Beef Stew</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -399,12 +381,10 @@
             
             <div class="menu-item">
                 <span class="item-name">Chicken Stroganoff</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Chicken Schnitzel</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -415,12 +395,10 @@
             
             <div class="menu-item">
                 <span class="item-name">Steam Barramundi</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Seafood Linguini</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -431,27 +409,22 @@
             
             <div class="menu-item">
                 <span class="item-name">Pasta Bolognese</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Pasta Carbonara</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">One Pot Tomato Pasta</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Pasta Minestrone</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Pasta Dough</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -462,43 +435,26 @@
             
             <div class="menu-item">
                 <span class="item-name">Swedish Meatballs</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Mexican Burritos</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Bechamel (White Sauce)</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Mac and Cheese</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Papardelle Garlic Mushroom</span>
-                <span class="item-dots"></span>
             </div>
             
             <div class="menu-item">
                 <span class="item-name">Gozleme</span>
-                <span class="item-dots"></span>
-            </div>
-        </div>
-
-        <div class="decorative-element">✦</div>
-
-        <div class="category">
-            <h2 class="category-title">Vegetarian Options</h2>
-            
-            <div class="menu-item">
-                <span class="item-name">Vegetarian Cold Spring Rolls</span>
-                <span class="item-dots"></span>
             </div>
         </div>
 
@@ -509,9 +465,9 @@
             
             <div class="menu-item">
                 <span class="item-name">Aldi Coffee</span>
-                <span class="item-dots"></span>
             </div>
-            </div>
+        </div>
+
         </div>
 
         <div class="footer">
